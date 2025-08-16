@@ -1,0 +1,40 @@
+:root{
+  /* Laranja */
+  --bs-primary: #ff6b00;
+  --bs-primary-rgb: 255, 107, 0;
+
+  /* Links */
+  --bs-link-color: #ff6b00;
+  --bs-link-hover-color: #cc5700;
+}
+
+/* Botões primários (garante contraste e hover bonitos) */
+.btn-primary{
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: #cc5700;
+  --bs-btn-hover-border-color: #cc5700;
+  --bs-btn-active-bg: #b44c00;
+  --bs-btn-active-border-color: #b44c00;
+}
+
+/* Outline primary */
+.btn-outline-primary{
+  --bs-btn-color: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: var(--bs-primary);
+  --bs-btn-hover-border-color: var(--bs-primary);
+  --bs-btn-active-bg: #cc5700;
+  --bs-btn-active-border-color: #cc5700;
+  --bs-btn-disabled-color: var(--bs-primary);
+}
+
+/* Badges */
+.badge.bg-primary{ background-color: var(--bs-primary) !important; }
+
+/* Paginação/links ativos (se usar) */
+.page-link{ color: var(--bs-primary); }
+.page-item.active .page-link{
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
