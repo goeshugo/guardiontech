@@ -1,0 +1,17 @@
+name: PHP Syntax Check
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  syntax-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Lint all PHP files
+        run: |
+          find . -type f -name "*.php" | xargs -I{} php -l {}
